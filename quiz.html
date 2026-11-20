@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="top-bar">
+            <span class="badge">Quick Quiz</span>
+            <span id="progress">Question 1 of 4</span>
+            <button id="themeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
+        </div>
+
+        <h1>Tech & Coding Quiz</h1>
+        <h2 id="questionText">Loading question...</h2>
+
+        <div id="optionsArea" class="options-list">
+            <label class="option-item">
+                <input type="radio" name="ans" value="0">
+                <span id="opt0"></span>
+            </label>
+            <label class="option-item">
+                <input type="radio" name="ans" value="1">
+                <span id="opt1"></span>
+            </label>
+            <label class="option-item">
+                <input type="radio" name="ans" value="2">
+                <span id="opt2"></span>
+            </label>
+            <label class="option-item">
+                <input type="radio" name="ans" value="3">
+                <span id="opt3"></span>
+            </label>
+        </div>
+
+        <button id="nextBtn" class="btn" onclick="nextQuestion()">Next Question</button>
+
+        <div id="resultBox" class="result-box" style="display: none;">
+            <h2>Quiz Completed!</h2>
+            <p id="resultText"></p>
+            <button class="btn" onclick="restartQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
